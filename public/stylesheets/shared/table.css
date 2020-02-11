@@ -1,0 +1,83 @@
+.table {
+	width: 100%;
+	border: 1px solid;
+	border-collapse: collapse;
+}
+
+th {
+	font-size: 1.1rem;
+	font-family: 'Cabin Condensed', sans-serif;
+	text-transform: uppercase;
+	background-color: var(--main-color-extra-light);
+	padding: .7em 0;
+	color: var(--main-color);
+	text-align: center;
+}
+
+td {
+	font-size: 1.1rem;
+	font-family: 'Courier Prime', monospace;
+	text-align: center;
+	color: var(--main-color);
+	border-top: 1px solid;
+	padding: .3em 0;
+}
+
+tr {
+	background-color: #eee;
+}
+
+.table-row:hover {
+	background-color: #fff;
+}
+
+.modify-button-head {
+	background-color: var(--main-color-light);
+}
+
+.modify-button {
+	font-family: 'Cabin Condensed', sans-serif;
+	text-decoration: none;
+	color: inherit;
+}
+
+.status-view {
+	width: 4em;
+	color: var(--status-view-dark);
+	background-color: var(--status-view);
+}
+
+.status-view:hover {
+	color: var(--status-view);
+	background-color: var(--status-view-dark);
+}
+
+.status-edit {
+	width: 4em;
+	color: var(--status-edit-dark);
+	background-color: var(--status-edit);
+}
+
+.status-edit:hover {
+	color: var(--status-edit);
+	background-color: var(--status-edit-dark);
+}
+
+.status-delete {
+	width: 4em;
+	color: var(--status-delete-dark);
+	background-color: var(--status-delete);
+}
+
+.status-delete:hover {
+	color: var(--status-delete);
+	background-color: var(--status-delete-dark);
+}
+
+.button-form {
+	margin: 0;
+	padding: 0;
+	width: 0;
+}
+
+

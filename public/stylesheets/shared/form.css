@@ -1,0 +1,52 @@
+form {
+	width: 100%;
+}
+
+input[type=text],
+input[type=tel] {
+	width: 100%;
+	font-size: 2rem;
+	font-family: 'Courier Prime', monospace;
+	color: var(--main-color);
+	padding: .2em .5em;
+	margin: .15em 0 .5em 0;
+}
+
+label {
+	color: var(--main-color);
+}
+
+.form-submit {
+	font-size: 2rem;
+	padding: .2em .75em;
+	border-radius: 10px;
+	background-color: var(--main-color);
+	color: var(--main-color-extra-light);
+	text-transform: lowercase;
+	margin: .2em;
+}
+
+.form-submit:hover {
+	background-color: var(--main-color-extra-light);
+	color: var(--main-color);
+}
+
+.radio-form {
+	margin: .5em 0;
+	padding: 2em;
+	border: 1px solid var(--main-color);
+	border-radius: 10px;
+	width: 15em;
+}
+
+.radio-input {
+	margin: 1em .5em;
+}
+
+.radio-label {
+}
+
+.form-group {
+}
+
+

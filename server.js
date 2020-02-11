@@ -6,6 +6,7 @@ const app = express()
 // OTHER MISC CONFIG
 const bodyParser = require('body-parser')
 const methodOverride = require('method-override')
+const path = require('path')
 app.use(express.json())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(methodOverride('_method'))
@@ -20,7 +21,9 @@ app.use(express.static('public'))
 
 // ROUTES CONFIG
 const staticPagesRouter = require('./routes/staticPages')
+const membersRouter = require('./routes/members')
 app.use('/', staticPagesRouter)
+app.use('/members', membersRouter)
 
 // DATABASE CONFIG
 const mongoose = require('mongoose')
@@ -32,7 +35,6 @@ db.on('error', error => console.error(error))
 db.once('open', () => console.log('+++ Connected to Mongoose +++'))
 
 app.listen(process.env.PORT, console.log(`+++ Server Started on PORT: ${process.env.PORT} +++`))
-
 
 
 

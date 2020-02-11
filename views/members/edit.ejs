@@ -1,0 +1,72 @@
+<h1>Update <%= editMember.name_first %> <%= editMember.name_last %></h1>
+
+<form action="/members/<%= editMember.id %>?_method=PUT" method="POST">
+
+	<div class="form-group">
+		<div class="form-row">
+			<label class="form-item" name="name_first">First Name</label>
+			<input class="form-item" name="name_first" type="text" value="<%= editMember.name_first %>">
+		</div>
+		<div class="form-row">
+			<label class="form-item" name="name_last">Last Name</label>
+			<input class="form-item" name="name_last" type="text" value="<%= editMember.name_last %>">
+		</div>
+	</div>
+
+	<div class="form-row">
+		<label class="form-item" name="email">Email</label>
+		<input class="form-item" name="email" type="text" value="<%= editMember.email %>">
+	</div>
+	<div class="form-row">
+		<label class="form-item" name="phone">Phone</label>
+		<input class="form-item" name="phone" type="tel" value="<%= editMember.phone %>" pattern="[0-9]{3}.[0-9]{3}.[0-9]{4}" title="###.###.####">
+	</div>
+	<div class="radio-form">
+		<div class="radio-button-row">
+			<input class="radio-input" type="radio" name="program" value="Jiu-Jitsu" checked>
+			<label class="radio-label" for="Jiu-Jitsu">Jiu-Jitsu</label>
+		</div>
+		<div class="radio-button-row">
+			<input class="radio-input" type="radio" name="program" value="Kick Boxing">
+			<label class="radio-label" for="Kick Boxing">Kick Boxing</label>
+		</div>
+		<div class="radio-button-row">
+			<input class="radio-input" type="radio" name="program" value="MMA">
+			<label class="radio-label" for="MMA">MMA</label>
+		</div>
+		<div class="radio-button-row">
+			<input class="radio-input" type="radio" name="program" value="Fitness">
+			<label class="radio-label" for="Fitness">Fitness</label>
+		</div>
+		<div class="radio-button-row">
+			<input class="radio-input" type="radio" name="program" value="All">
+			<label class="radio-label" for="All">All</label>
+		</div>
+	</div>
+	<div class="radio-form">
+		<div class="radio-button-row">
+			<input class="radio-input" type="radio" name="rank" value="white" checked>
+			<label class="radio-label" for="white">white</label>
+		</div>
+		<div class="radio-button-row">
+			<input class="radio-input" type="radio" name="rank" value="blue">
+			<label class="radio-label" for="blue">blue</label>
+		</div>
+		<div class="radio-button-row">
+			<input class="radio-input" type="radio" name="rank" value="purple">
+			<label class="radio-label" for="purple">purple</label>
+		</div>
+		<div class="radio-button-row">
+			<input class="radio-input" type="radio" name="rank" value="brown">
+			<label class="radio-label" for="brown">brown</label>
+		</div>
+		<div class="radio-button-row">
+			<input class="radio-input" type="radio" name="rank" value="black">
+			<label class="radio-label" for="black">black</label>
+		</div>
+	</div>
+
+	<a href="/members">Cancel</a>
+	<input class="form-submit" type="submit">Update</input>
+
+</form>
