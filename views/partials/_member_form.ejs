@@ -1,25 +1,21 @@
-<h1>Create New Member</h1>
-
-<form class="create-new-member-form" action="/members" method="POST">
-
-	<div class="first-last-name-group">
+<div class="first-last-name-group">
 		<div class="form-row">
 			<label class="text-input-label" name="name_first">First Name</label>
-			<input class="text-input" name="name_first" type="text">
+			<input class="text-input" name="name_first" type="text" value="<%= member.name_first %>">
 		</div>
 		<div class="form-row">
 			<label class="text-input-label" name="name_last">Last Name</label>
-			<input class="text-input" name="name_last" type="text">
+			<input class="text-input" name="name_last" type="text" value="<%= member.name_last %>">
 		</div>
 	</div>
 	<div class="email-phone-group">
 		<div class="form-row">
 			<label class="text-input-label" name="email">Email</label>
-			<input class="text-input" name="email" type="email">
+			<input class="text-input" name="email" type="email" value="<%= member.email %>">
 		</div>
 		<div class="form-row">
 			<label class="text-input-label" name="phone">Phone</label>
-			<input class="text-input" name="phone" type="tel" value="" pattern="[0-9]{3}.[0-9]{3}.[0-9]{4}" title="###.###.####">
+			<input class="text-input" name="phone" type="tel" value="" pattern="[0-9]{3}.[0-9]{3}.[0-9]{4}" title="###.###.####" value="<%= member.phone %>">
 		</div>
 	</div>
 	<div class="program-rank-group">
@@ -27,7 +23,7 @@
 		<fieldset class="program-fieldset">
 			<legend>Program</legend>
 			<div class="radio-button-row">
-				<input class="radio-input" type="radio" name="program" value="Jiu-Jitsu">
+				<input class="radio-input" type="radio" name="program" value="Jiu-Jitsu" checked>
 				<label class="radio-label" for="Jiu-Jitsu">Jiu-Jitsu</label>
 			</div>
 			<div class="radio-button-row">
@@ -51,7 +47,7 @@
 		<fieldset class="rank-fieldset">
 			<legend>Jiu-Jitsu Rank</legend>
 			<div class="radio-button-row">
-				<input class="radio-input" type="radio" name="rank" value="white">
+				<input class="radio-input" type="radio" name="rank" value="white" checked>
 				<label class="radio-label" for="white">white</label>
 			</div>
 			<div class="radio-button-row">
@@ -73,9 +69,3 @@
 		</fieldset>
 
 	</div>
-
-
-	<a class="form-submit" href="/members">Cancel</a>
-	<button class="form-submit" type="submit">Create</button>
-
-</form>

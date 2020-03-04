@@ -1,1 +1,42 @@
-<h1><%= showMember.name_first %> <%= showMember.name_last %></h1>
+<div class="profile">
+<h3 class="profile-name"><%= showMember.name_first %> <%= showMember.name_last %></h3>
+<table class="profile-table">
+	<thead></thead>
+	<tbody>
+		<tr>
+			<th>email</th>
+			<th>phone</th>
+		</tr>
+		<tr>
+			<!-- mailto:someone@yoursite.com?subject=Mail from Our Site" -->
+			<td><a href="mailto:<%= showMember.email %>"><%= showMember.email %></a></td>
+			<td><%= showMember.phone %></td>
+		</tr>
+		<tr>
+			<th>Program</th>
+			<th>Rank</th>
+		</tr>
+		<tr>
+			<td><%= showMember.program %></td>
+			<td><%= showMember.rank %></td>
+		</tr>
+	</tbody>
+	<tfoot></tfoot>
+</table>
+	
+</div>
+
+
+
+
+name_first
+name_last
+email
+phone
+staff 										[true, false]
+instructor 								[true, false]
+admin  										[true, false]
+program 									["Jiu-Jitsu", "Kick Boxing", "MMA", "Fitness"]
+rank 											["white", "blue", "purple", "brown", "black"]
+attendance_log
+createdAt

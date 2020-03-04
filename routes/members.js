@@ -2,11 +2,12 @@ const express = require('express')
 const router = express.Router()
 const Member = require('../models/member')
 
+const attributes = [ 'name_first', 'name_last', 'email', 'phone', 'staff', 'instructor', 'admin', 'program', 'rank' ]
+
 // MEMBERS - ALL
 router.get('/', async (req, res) => {
 	try {
 		const members = await Member.find().sort({ createdAt: 'descending' })
-		// res.render('members/index', { members, title: 'All Active Members' })
 		res.render('members/index', { members })
 	} catch (err) {
 		res.status(500).json({ message: err.message })
@@ -20,22 +21,11 @@ router.get('/new', (req, res) => {
 
 // MEMBER - CREATE
 router.post('/', async (req, res) => {
-	// const attributes = [ 'name_first', 'name_last', 'email', 'phone', 'staff', 'instructor', 'admin', 'program', 'rank' ]
-	const member = new Member({
-		// attributes.forEach(attribute => {
-		// 	member[attribute] = req.body[attribute]
-		// })
-		name_first: req.body.name_first,
-		name_last: req.body.name_last,
-		email: req.body.email,
-		phone: req.body.phone,
-		program: req.body.program,
-		rank: req.body.rank,
-		staff: req.body.staff,
-		instructor: req.body.instructor,
-		admin: req.body.admin
+	const memberObject = {}
+	attributes.forEach(attribute => {
+		memberObject[attribute] = req.body[attribute]
 	})
-
+	const member = new Member(memberObject)
 	try {
 		const newMember = await member.save()
 		res.redirect('members')
@@ -43,10 +33,6 @@ router.post('/', async (req, res) => {
 		res.status(400).json({ message: err.message })
 	}
 })
-
-// if ( req.body[attribute] != null ) {
-// 	res.member[attribute] = req.body[attribute] 
-// }
 
 // MEMBER - SHOW
 router.get('/:id', getMember, async (req, res) => {
@@ -68,18 +54,8 @@ router.get('/:id/edit', getMember, async (req, res) => {
 	}
 })
 
-
 // MEMBER - UPDATE
 router.put('/:id', getMember, async (req, res) => {
-	const attributes = [ 'name_first',
-											 'name_last',
-											 'email',
-											 'phone',
-											 'program',
-											 'rank',
-											 'staff',
-											 'instructor',
-											 'admin' ]
 	attributes.forEach( attribute => {
 		if ( req.body[attribute] != null ) {
 			res.member[attribute] = req.body[attribute]
@@ -93,7 +69,6 @@ router.put('/:id', getMember, async (req, res) => {
 	}
 })
 
-
 // MEMBER - DELETE
 router.delete('/:id', getMember, async (req, res) => {
 	try {
@@ -103,7 +78,6 @@ router.delete('/:id', getMember, async (req, res) => {
 		res.status(500).json({ message: err.message })
 	}
 })
-
 
 async function getMember(req, res, next) {
 	let member

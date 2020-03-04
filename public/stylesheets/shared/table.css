@@ -4,9 +4,10 @@
 	border-collapse: collapse;
 }
 
-th {
+.table-head {
 	font-size: 1.1rem;
-	font-family: 'Cabin Condensed', sans-serif;
+	font-family: var(--site-font);
+	/*font-family: 'Cabin Condensed', sans-serif;*/
 	text-transform: uppercase;
 	background-color: var(--main-color-extra-light);
 	padding: .7em 0;
@@ -14,7 +15,7 @@ th {
 	text-align: center;
 }
 
-td {
+.table-cell {
 	font-size: 1.1rem;
 	font-family: 'Courier Prime', monospace;
 	text-align: center;
@@ -24,7 +25,7 @@ td {
 }
 
 tr {
-	background-color: #eee;
+	/*background-color: #eee;*/
 }
 
 .table-row:hover {
@@ -36,7 +37,8 @@ tr {
 }
 
 .modify-button {
-	font-family: 'Cabin Condensed', sans-serif;
+	font-family: var(--site-font);
+	/*font-family: 'Cabin Condensed', sans-serif;*/
 	text-decoration: none;
 	color: inherit;
 }
@@ -74,10 +76,5 @@ tr {
 	background-color: var(--status-delete-dark);
 }
 
-.button-form {
-	margin: 0;
-	padding: 0;
-	width: 0;
-}
 
 

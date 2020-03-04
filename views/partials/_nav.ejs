@@ -1,12 +1,24 @@
-<head>
-	<nav>
+<header>
+	<nav role="navigation">
 		<ul>
 			<li><a href="/">Home</a></li>
 			<li><a href="/about">About</a></li>
 			<li><a href="/info">Information</a></li>
 			<li><a href="/contact">Contact</a></li>
-			<li><a href="/members">All Members</a></li>
-			<li><a href="/members/new">New Member</a></li>
+			<div class="dropdown">
+				<button class="dropdown-button">Members
+					
+				</button>
+				<ul class="dropdown-content">
+					<li><a class="sub-menu" href="/members">All Members</a></li>
+					<li><a class="sub-menu" href="/members/new">New Member</a></li>
+				</ul>
+			</div>
+			<li><a href="#">Programs</a></li>
+			<ul class="dropdown">
+				<li><a href="/programs">All Programs</a></li>
+				<li><a href="/programs/new">New Member</a></li>
+			</ul>
 		</ul>
 	</nav>
-</head>
+</header>

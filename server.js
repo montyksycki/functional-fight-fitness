@@ -22,8 +22,10 @@ app.use(express.static('public'))
 // ROUTES CONFIG
 const staticPagesRouter = require('./routes/staticPages')
 const membersRouter = require('./routes/members')
+const programsRouter = require('./routes/programs')
 app.use('/', staticPagesRouter)
 app.use('/members', membersRouter)
+app.use('/programs', programsRouter)
 
 // DATABASE CONFIG
 const mongoose = require('mongoose')
@@ -34,7 +36,23 @@ const db = mongoose.connection
 db.on('error', error => console.error(error))
 db.once('open', () => console.log('+++ Connected to Mongoose +++'))
 
+app.locals.someVar = "Hey Monty!!!"
+
+// app.locals.getRadioInputs = () => {
+// 	console.log("stuff")
+// 	const radio_inputs = document.getElementsByClassName('radio-input')
+// 	console.log( radio_inputs )
+// }
+
 app.listen(process.env.PORT, console.log(`+++ Server Started on PORT: ${process.env.PORT} +++`))
+
+
+
+
+
+
+
+
 
 
 

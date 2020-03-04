@@ -1,0 +1,20 @@
+.profile {
+	margin: 2em auto;
+	padding: 1em;
+	width: 60%;
+	border: 2px solid var(--main-color);
+	border-radius: 30px;
+}
+
+.profile-name {
+	margin: .5rem;
+	font-family: ;
+	font-size: 3rem;
+	text-align: center;
+	color: var(--main-color);
+}
+
+.profile-table {
+	width: 100%;
+	padding: 1em;
+}

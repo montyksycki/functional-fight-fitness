@@ -1,0 +1,87 @@
+<h1>Create New Program</h1>
+
+<form class="" action="/programs" method="POST">
+
+	<div class="radio-button-panel">
+
+		<fieldset class="program-fieldset">
+			<legend>Training Program Type</legend>
+			<div class="radio-button-row">
+				<input class="radio-input" type="radio" name="training_program_type" value="Jiu-Jitsu - Gi">
+				<label class="radio-label" for="Jiu-Jitsu - Gi">Jiu-Jitsu - Gi</label>
+			</div>
+			<div class="radio-button-row">
+				<input class="radio-input" type="radio" name="training_program_type" value="Jiu-Jitsu - NoGi">
+				<label class="radio-label" for="Jiu-Jitsu - NoGi">Jiu-Jitsu - NoGi</label>
+			</div>
+			<div class="radio-button-row">
+				<input class="radio-input" type="radio" name="training_program_type" value="Muay Thai Kick Boxing">
+				<label class="radio-label" for="Muay Thai Kick Boxing">Muay Thai Kick Boxing</label>
+			</div>
+			<div class="radio-button-row">
+				<input class="radio-input" type="radio" name="training_program_type" value="MMA">
+				<label class="radio-label" for="MMA">MMA</label>
+			</div>
+			<div class="radio-button-row">
+				<input class="radio-input" type="radio" name="training_program_type" value="Fitness">
+				<label class="radio-label" for="Fitness">Fitness</label>
+			</div>
+			<div class="radio-button-row">
+				<input class="radio-input" type="radio" name="training_program_type" value="All">
+				<label class="radio-label" for="All">All</label>
+			</div>
+		</fieldset>
+
+		<fieldset class="program-fieldset">
+			<legend>Level</legend>
+			<div class="radio-button-row">
+				<input class="radio-input" type="radio" name="level" value="Beginner">
+				<label class="radio-label" for="Beginner">Beginner</label>
+			</div>
+			<div class="radio-button-row">
+				<input class="radio-input" type="radio" name="level" value="Intermediate">
+				<label class="radio-label" for="Intermediate">Intermediate</label>
+			</div>
+			<div class="radio-button-row">
+				<input class="radio-input" type="radio" name="level" value="Advanced">
+				<label class="radio-label" for="Advanced">Advanced</label>
+			</div>
+			<div class="radio-button-row">
+				<input class="radio-input" type="radio" name="level" value="All">
+				<label class="radio-label" for="All">All</label>
+			</div>
+		</fieldset>
+
+		<fieldset class="program-fieldset">
+			<legend>Adult | Women | Children</legend>
+			<div class="radio-button-row">
+				<input class="radio-input" type="radio" name="gender_age" value="Adult">
+				<label class="radio-label" for="Adult">Adult</label>
+			</div>
+			<div>
+				<input class="radio-input" type="radio" name="gender_age" value="Women">
+				<label class="radio-label" for="Women">Women</label>
+			</div>
+			<div>
+				<input class="radio-input" type="radio" name="gender_age" value="Children">
+				<label class="radio-label" for="Children">Children</label>
+			</div>
+		</fieldset>
+
+	</div>
+
+	<div class="form-row">
+		<label class="form-item" name="training_program_title">Training Program Title</label>
+		<input class="form-item" name="training_program_title" type="text" value="<%=  %>">
+	</div>
+
+	<div class="form-row">
+		<label class="form-item" name="description">Description</label>
+		<textarea class="form-item" name="description"></textarea>
+	</div>
+
+	<a href="/programs">Cancel</a>
+	<button class="form-submit" type="submit">Create</button>
+
+</form>
+

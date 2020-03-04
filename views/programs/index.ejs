@@ -1,0 +1,37 @@
+<h1>All Programs</h1>
+
+<table class="table">
+	<thead></thead>
+	<tbody>
+		<tr>
+			<th class="table-head">Program Type</th>
+			<th class="table-head">Program Level</th>
+			<th class="table-head">Age / Gender</th>
+			<th class="table-head">Program Title</th>
+			<th class="table-head">Description</th>
+			<th class="table-head modify-button-head" colspan="3">Program Details</th>
+		</tr>
+		<% programs.forEach(program => { %>
+		<tr>
+			<td class="table-cell"><%= program.training_program_type %></td>
+			<td class="table-cell"><%= program.level %></td>
+			<td class="table-cell"><%= program.gender_age %></td>
+			<td class="table-cell"><%= program.training_program_title %></td>
+			<td class="table-cell"><%= program.description %></td>
+			<td class="table-cell status-view"><a class="modify-button" href="/programs/<%= program.id %>">view</a></td>
+			<td class="table-cell status-edit"><a class="modify-button" href="/programs/<%= program.id %>/edit">edit</a></td>
+			<td class="table-cell status-delete">
+				<form method="POST" action="/programs/<%= program.id %>?_method=DELETE">
+					<button class="modify-button" Details type="submit" value="">delete</button>
+				</form>
+			</td>
+		</tr>
+		<tr>
+		</tr>
+		<tr>
+		</tr>
+		<% }) %>
+	</tbody>
+	<tfoot></tfoot>
+</table>
+

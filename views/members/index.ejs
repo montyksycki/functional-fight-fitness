@@ -2,27 +2,27 @@
 <table class="table">
 	<thead>
 		<tr>
-			<th>Name</th>
-			<th>Email</th>
-			<th>Program</th>
-			<th>Rank</th>
-			<th>Phone</th>
-			<th class="modify-button-head" colspan="3">Member Details</th>
+			<th class="table-head">Name</th>
+			<th class="table-head">Email</th>
+			<th class="table-head">Program</th>
+			<th class="table-head">Rank</th>
+			<th class="table-head">Phone</th>
+			<th class="table-head modify-button-head" colspan="3">Member Details</th>
 		</tr>
 	</thead>
 	<tbody>
 		<% members.forEach(member => { %>
 		<tr class="table-row">
-			<td class="name"><%= member.name_first %> <%= member.name_last %></td>
-			<td><%= member.email %></td>
-			<td><%= member.program %></td>
-			<td><%= member.rank %></td>
-			<td><%= member.phone %></td>
-			<td class="status-view"><a class="modify-button" href="/members/<%= member.id %>">view</a></td>
-			<td class="status-edit"><a class="modify-button" href="/members/<%= member.id %>/edit">edit</a></td>
-			<td class="status-delete">
-				<form class="button-form" method="POST" action="/members/<%= member.id %>?_method=DELETE">
-					<input class="status-delete" type="submit" value="Delete">
+			<td class="table-cell name"><%= member.name_first %> <%= member.name_last %></td>
+			<td class="table-cell"><%= member.email %></td>
+			<td class="table-cell"><%= member.program %></td>
+			<td class="table-cell"><%= member.rank %></td>
+			<td class="table-cell"><%= member.phone %></td>
+			<td class="table-cell status-view"><a class="modify-button" href="/members/<%= member.id %>">view</a></td>
+			<td class="table-cell status-edit"><a class="modify-button" href="/members/<%= member.id %>/edit">edit</a></td>
+			<td class="table-cell status-delete">
+				<form method="POST" action="/members/<%= member.id %>?_method=DELETE">
+					<button class="modify-button" type="submit" value="">delete</button>
 				</form>
 			</td>
 		</tr>
