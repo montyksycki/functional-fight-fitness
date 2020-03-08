@@ -1,0 +1,35 @@
+<h1>Ralph Gracie Brazilian Jiu-Jitsu Team</h1>
+
+<p>The road to black belt is one of the most challenging and rewarding journeys in the world. Along the journey, you will be learn more about yourself than you ever expected. But no one makes it alone. You will grow with your teammates. </p>
+
+<p>Each person will develop her or his own game and style. Your style will be influenced by your professors, coaches, and training partners. </p>
+
+<p>Remember: A black belt is a white belt that never quit!</p>
+
+<h2 class="beltHeading" style="color: black">Black Belt</h2>
+<% belts_black.forEach( belt_black => { %>
+	<ul class="beltList">
+		<li class="beltListItem"><%= belt_black.name_first %> <%= belt_black.name_last %></li>
+	</ul>
+<% }) %>
+
+<h2 class="beltHeading" style="color: brown">Brown Belt</h2>
+<% belts_brown.forEach( belt_brown => { %>
+	<ul class="beltList">
+		<li class="beltListItem"><%= belt_brown.name_first %> <%= belt_brown.name_last %></li>
+	</ul>
+<% }) %>
+
+<h2 class="beltHeading" style="color: purple">Purple Belt</h2>
+<% belts_purple.forEach( belt_purple => { %>
+	<ul class="beltList">
+		<li class="beltListItem"><%= belt_purple.name_first %> <%= belt_purple.name_last %></li>
+	</ul>
+<% }) %>
+
+<h2 class="beltHeading" style="color: blue">Blue Belt</h2>
+<% belts_blue.forEach( belt_blue => { %>
+	<ul class="beltList">
+		<li class="beltListItem"><%= belt_blue.name_first %> <%= belt_blue.name_last %></li>
+	</ul>
+<% }) %>

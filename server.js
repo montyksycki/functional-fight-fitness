@@ -20,12 +20,14 @@ app.use(expressLayouts)
 app.use(express.static('public'))
 
 // ROUTES CONFIG
-const staticPagesRouter = require('./routes/staticPages')
-const membersRouter = require('./routes/members')
-const programsRouter = require('./routes/programs')
-app.use('/', staticPagesRouter)
-app.use('/members', membersRouter)
-app.use('/programs', programsRouter)
+const staticPageRouter = require('./routes/staticPages')
+const memberRouter = require('./routes/members')
+const programRouter = require('./routes/programs')
+const scheduleRouter = require('./routes/schedules')
+app.use('/', staticPageRouter)
+app.use('/members', memberRouter)
+app.use('/programs', programRouter)
+app.use('/schedules', scheduleRouter)
 
 // DATABASE CONFIG
 const mongoose = require('mongoose')

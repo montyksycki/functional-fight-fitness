@@ -73,12 +73,18 @@ background-repeat: no-repeat;
 
 h1, h2, h3, h4, h5, h6 {
 	color: var(--main-color);
+	text-align: center;
 }
 
 h1 {
-	text-align: center;
 	font-size: 2.75rem;
+	line-height: 2.9rem;
 	margin: .2em 0 .1em 0;
+}
+
+h2 {
+	font-size: 2rem;
+	margin: .4em 0 .1em 0;
 }
 
 h3 {
@@ -97,8 +103,32 @@ button, input[type="submit"], input[type="reset"] {
 }
 
 p {
+	color: var(--main-color);
 	font-family: 'Open Sans';
 	margin: .2em 0 .4em 0;
 }
 
+.indexLogo {
+	display: block;
+	margin: 3em auto;
+	width: 80%;
+}
 
+.beltHeading {
+	text-transform: uppercase;
+}
+
+.beltList {
+	margin: 0;
+	padding: 0;
+}
+
+.beltListItem {
+	display: table;
+	margin: 0 auto;
+	font-size: 1.2rem;
+	padding: .2em;
+	color: #333;
+	font-weight: 300;
+	text-transform: uppercase;
+}
