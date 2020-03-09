@@ -104,3 +104,16 @@ textarea {
 	color: var(--main-color);
 }
 
+select {
+	width: 100%;
+	font-size: 2.2rem;
+	font-family: var(--form-font);
+	color: var(--main-color);
+	padding: .5em;
+	margin: .2em 0;
+}
+
+select option:hover {
+	font-family: var(--form-font);
+}
+

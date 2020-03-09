@@ -27,6 +27,3 @@ router.get('/bjj_team', async (req, res) => {
 })
 
 module.exports = router
-
-
-// [ belts_black, belts_brown, belts_purple, belts_blue ]

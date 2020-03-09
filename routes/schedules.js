@@ -10,7 +10,7 @@ router.get('/new', async (req, res) => {
 	try {
 		const instructors = await Member.find({ instructor: true })
 		const programs = await Program.find({})
-		console.log(instructors)
+		// console.log(instructors)
 		res.render('schedules/new', { instructors, programs })
 	} catch {
 
