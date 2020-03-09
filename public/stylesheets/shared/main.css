@@ -114,6 +114,17 @@ p {
 	width: 80%;
 }
 
+.gitHubLink {
+	text-align: center;
+	font-size: 1.4rem;
+}
+
+.gitHubLink a {
+	text-decoration: none;
+	color: green;
+	/*font-weight: 700;*/
+}
+
 .beltHeading {
 	text-transform: uppercase;
 }

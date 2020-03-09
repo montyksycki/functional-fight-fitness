@@ -38,7 +38,6 @@ const db = mongoose.connection
 db.on('error', error => console.error(error))
 db.once('open', () => console.log('+++ Connected to Mongoose +++'))
 
-app.locals.someVar = "Hey Monty!!!"
 
 // app.locals.getRadioInputs = () => {
 // 	console.log("stuff")
@@ -47,15 +46,3 @@ app.locals.someVar = "Hey Monty!!!"
 // }
 
 app.listen(process.env.PORT, console.log(`+++ Server Started on PORT: ${process.env.PORT} +++`))
-
-
-
-
-
-
-
-
-
-
-
-
